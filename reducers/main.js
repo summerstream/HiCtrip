@@ -1,7 +1,9 @@
-const reducers = (state = [], action) => {
+const reducers = (state = 0, action) => {
   switch (action.type) {
-    case 'ADD':
-      return state
+    case 'INCREMENT':
+      return state+1
+    case 'DECREMENT':
+      return state-1
     default:
       return state
   }
