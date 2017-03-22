@@ -15,7 +15,9 @@ export default class InputBar extends Component{
             <View style={styles.container}>
                 <TextInput 
                     style={styles.input}
-                    onChange={this.onInput} />
+                    onChange={this.onInput} 
+                    value={'我想去三亚租车玩'}
+                />
                 <Image 
                     style={styles.icon}
                     source={require('../img/speaker-512.png')}
@@ -34,6 +36,8 @@ const styles = StyleSheet.create({
     input:{
         flex:100,
         height:50,
+        padding:5,
+        paddingLeft:20,
         borderColor:'grey'
     },
     icon:{
