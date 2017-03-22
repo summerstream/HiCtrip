@@ -5,21 +5,16 @@ import {
   Text,
   View
 } from 'react-native';
+import InputBar from '../components/input-bar.js';
 
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <View style={styles.content}>
+          <Text>Hi Ctrip!</Text>
+        </View>
+        <InputBar />
       </View>
     );
   }
@@ -28,14 +23,13 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    flexDirection:'column',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#2065c2',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  content: {
+    marginTop: 40,
   },
   instructions: {
     textAlign: 'center',
