@@ -36,6 +36,8 @@
 		2DCD954D1E0B4F2C00145EB5 /* HiCtripTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HiCtripTests.m */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		EA82FEB61E8434BB00B98820 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FEB51E8434BB00B98820 /* iflyMSC.framework */; };
+		EA82FEB91E843C3300B98820 /* IFlyRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = EA82FEB81E843C3300B98820 /* IFlyRecognizer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -255,6 +257,9 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		EA82FEB51E8434BB00B98820 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = ../../../../Downloads/iOS_voice_1156_58cd3bd5/lib/iflyMSC.framework; sourceTree = "<group>"; };
+		EA82FEB71E843B7100B98820 /* IFlyRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFlyRecognizer.h; sourceTree = "<group>"; };
+		EA82FEB81E843C3300B98820 /* IFlyRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFlyRecognizer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +275,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA82FEB61E8434BB00B98820 /* iflyMSC.framework in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -396,6 +402,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				EA82FEB71E843B7100B98820 /* IFlyRecognizer.h */,
+				EA82FEB81E843C3300B98820 /* IFlyRecognizer.m */,
 			);
 			name = HiCtrip;
 			sourceTree = "<group>";
@@ -463,6 +471,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				EA82FE9B1E84347200B98820 /* Frameworks */,
 				13B07FAE1A68108700A75B9A /* HiCtrip */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* HiCtripTests */,
@@ -481,6 +490,14 @@
 				2D02E4901E0B4A5D006451C7 /* HiCtrip-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EA82FE9B1E84347200B98820 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA82FEB51E8434BB00B98820 /* iflyMSC.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -906,6 +923,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				EA82FEB91E843C3300B98820 /* IFlyRecognizer.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -998,6 +1016,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HiCtrip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1015,6 +1034,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HiCtrip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (

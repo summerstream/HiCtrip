@@ -2,7 +2,8 @@ import React , {Component} from 'react'
 import {
     View,
     Text,
-    StyleSheet
+    StyleSheet,
+    NativeModules
 }from 'react-native'
 
 export default class Welcome extends Component{

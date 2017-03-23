@@ -3,12 +3,21 @@ import{
     View,
     StyleSheet,
     TextInput,
-    Image
+    Image,
+    Button,
+    Alert,
+    NativeModules
 }from 'react-native'
 
 export default class InputBar extends Component{
     onInput(){
 
+    }
+    onPress(){
+        // Alert.alert('onPress');
+        var recognizer = NativeModules.IFlyRecognizer;
+        Alert.alert(recognizer == undefined ? '1':'0');
+        // recognizer.addEvent('name','haha,address');
     }
     render(){
         return (
@@ -17,6 +26,10 @@ export default class InputBar extends Component{
                     style={styles.input}
                     onChange={this.onInput} 
                     value={'我想去三亚租车玩'}
+                />
+                <Button 
+                    onPress={this.onPress}
+                    title='button'
                 />
                 <Image 
                     style={styles.icon}
