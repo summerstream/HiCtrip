@@ -16,8 +16,10 @@ export default class InputBar extends Component{
     onPress(){
         // Alert.alert('onPress');
         var recognizer = NativeModules.IFlyRecognizer;
-        Alert.alert(recognizer == undefined ? '1':'0');
+        // Alert.alert(recognizer == undefined ? '1':'0');
         // recognizer.addEvent('name','haha,address');
+        recognizer.create();
+        recognizer.begin();
     }
     render(){
         return (

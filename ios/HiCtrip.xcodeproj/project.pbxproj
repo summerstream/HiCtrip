@@ -52,6 +52,8 @@
 		EA82FF271E8585FE00B98820 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF1E1E8585FE00B98820 /* SystemConfiguration.framework */; };
 		EA82FF281E8585FE00B98820 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF1F1E8585FE00B98820 /* UIKit.framework */; };
 		EA82FF2A1E85866700B98820 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF291E85866700B98820 /* libz.tbd */; };
+		EA82FF2D1E858D1300B98820 /* IATViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA82FF2C1E858D1300B98820 /* IATViewController.m */; };
+		EA82FF301E85986800B98820 /* ISRDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA82FF2F1E85986800B98820 /* ISRDataHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -288,6 +290,10 @@
 		EA82FF1E1E8585FE00B98820 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EA82FF1F1E8585FE00B98820 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EA82FF291E85866700B98820 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		EA82FF2B1E858CAC00B98820 /* IATViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IATViewController.h; sourceTree = "<group>"; };
+		EA82FF2C1E858D1300B98820 /* IATViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATViewController.m; sourceTree = "<group>"; };
+		EA82FF2E1E85983C00B98820 /* ISRDataHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISRDataHelper.h; sourceTree = "<group>"; };
+		EA82FF2F1E85986800B98820 /* ISRDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISRDataHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -446,6 +452,10 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				EA82FEB71E843B7100B98820 /* IFlyRecognizer.h */,
 				EA82FEB81E843C3300B98820 /* IFlyRecognizer.m */,
+				EA82FF2B1E858CAC00B98820 /* IATViewController.h */,
+				EA82FF2C1E858D1300B98820 /* IATViewController.m */,
+				EA82FF2E1E85983C00B98820 /* ISRDataHelper.h */,
+				EA82FF2F1E85986800B98820 /* ISRDataHelper.m */,
 			);
 			name = HiCtrip;
 			sourceTree = "<group>";
@@ -981,6 +991,8 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				EA82FEB91E843C3300B98820 /* IFlyRecognizer.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				EA82FF301E85986800B98820 /* ISRDataHelper.m in Sources */,
+				EA82FF2D1E858D1300B98820 /* IATViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,9 @@
 //
 
 #import <React/RCTBridgeModule.h>
+#import "IATViewController.h"
 
-@interface IFlyRecognizer : NSObject <RCTBridgeModule>
+@interface IFlyRecognizer : NSObject <RCTBridgeModule>{
+  @private IATViewController *deck;
+}
 @end
