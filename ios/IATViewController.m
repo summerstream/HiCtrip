@@ -23,7 +23,7 @@
   [_iFlySpeechRecognizer setParameter:@"" forKey:[IFlySpeechConstant ASR_AUDIO_PATH]];
   
   [_iFlySpeechRecognizer setParameter:@"json" forKey:[IFlySpeechConstant RESULT_TYPE]];
-
+  [_iFlySpeechRecognizer setDelegate:self];
 //  [_iFlySpeechRecognizer start];
   RCTLogInfo(@"IATViewController has been inited. ");
   
@@ -53,6 +53,7 @@
 
 -(void)onResults:(NSArray *) results isLast:(BOOL)isLast
 {
+  RCTLogInfo(@"---------callback---------------");
   NSMutableString *resultString = [[NSMutableString alloc] init];
   NSDictionary *dic = results[0];
   for (NSString *key in dic) {
@@ -60,8 +61,11 @@
   }
 //  _result =[NSString stringWithFormat:@"%@%@", _textView.text,resultString];
   NSString * resultFromJson =  [ISRDataHelper stringFromJson:resultString];
+  RCTLogInfo(@"-------resultFromJson is:%@",resultFromJson);
   if(isLast){
-    
+    NSLog(@"听写结果(json)：%@测试",  self.result);
+    RCTLogInfo(@"------final string is: %@", resultFromJson);
+
   }
 }
 

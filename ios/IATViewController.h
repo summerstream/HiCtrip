@@ -12,6 +12,8 @@
 @interface IATViewController :
 UIViewController<IFlySpeechRecognizerDelegate>
 @property (nonatomic, strong) IFlySpeechRecognizer *iFlySpeechRecognizer;
+@property (nonatomic, strong) NSString * result;
+
 +(void)start;
 -(void)begin;
 -(void)initRecognizer;
