@@ -36,8 +36,22 @@
 		2DCD954D1E0B4F2C00145EB5 /* HiCtripTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HiCtripTests.m */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		EA82FEB61E8434BB00B98820 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FEB51E8434BB00B98820 /* iflyMSC.framework */; };
 		EA82FEB91E843C3300B98820 /* IFlyRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = EA82FEB81E843C3300B98820 /* IFlyRecognizer.m */; };
+		EA82FF0E1E8584AB00B98820 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF0D1E8584AB00B98820 /* iflyMSC.framework */; };
+		EA82FF101E8584CF00B98820 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF0F1E8584CF00B98820 /* AddressBook.framework */; };
+		EA82FF121E8584FD00B98820 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF111E8584FD00B98820 /* AddressBookUI.framework */; };
+		EA82FF151E85851100B98820 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF131E85851100B98820 /* Contacts.framework */; };
+		EA82FF161E85851100B98820 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF141E85851100B98820 /* ContactsUI.framework */; };
+		EA82FF201E8585FE00B98820 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF171E8585FE00B98820 /* AudioToolbox.framework */; };
+		EA82FF211E8585FE00B98820 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF181E8585FE00B98820 /* AVFoundation.framework */; };
+		EA82FF221E8585FE00B98820 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF191E8585FE00B98820 /* CoreGraphics.framework */; };
+		EA82FF231E8585FE00B98820 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF1A1E8585FE00B98820 /* CoreLocation.framework */; };
+		EA82FF241E8585FE00B98820 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF1B1E8585FE00B98820 /* CoreTelephony.framework */; };
+		EA82FF251E8585FE00B98820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF1C1E8585FE00B98820 /* Foundation.framework */; };
+		EA82FF261E8585FE00B98820 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF1D1E8585FE00B98820 /* QuartzCore.framework */; };
+		EA82FF271E8585FE00B98820 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF1E1E8585FE00B98820 /* SystemConfiguration.framework */; };
+		EA82FF281E8585FE00B98820 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF1F1E8585FE00B98820 /* UIKit.framework */; };
+		EA82FF2A1E85866700B98820 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF291E85866700B98820 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -257,9 +271,23 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		EA82FEB51E8434BB00B98820 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = ../../../../Downloads/iOS_voice_1156_58cd3bd5/lib/iflyMSC.framework; sourceTree = "<group>"; };
 		EA82FEB71E843B7100B98820 /* IFlyRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFlyRecognizer.h; sourceTree = "<group>"; };
 		EA82FEB81E843C3300B98820 /* IFlyRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFlyRecognizer.m; sourceTree = "<group>"; };
+		EA82FF0D1E8584AB00B98820 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = Frameworks/iflyMSC.framework; sourceTree = "<group>"; };
+		EA82FF0F1E8584CF00B98820 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		EA82FF111E8584FD00B98820 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		EA82FF131E85851100B98820 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		EA82FF141E85851100B98820 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+		EA82FF171E8585FE00B98820 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		EA82FF181E8585FE00B98820 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EA82FF191E8585FE00B98820 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EA82FF1A1E8585FE00B98820 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EA82FF1B1E8585FE00B98820 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		EA82FF1C1E8585FE00B98820 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EA82FF1D1E8585FE00B98820 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EA82FF1E1E8585FE00B98820 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EA82FF1F1E8585FE00B98820 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EA82FF291E85866700B98820 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,7 +303,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA82FEB61E8434BB00B98820 /* iflyMSC.framework in Frameworks */,
+				EA82FF2A1E85866700B98820 /* libz.tbd in Frameworks */,
+				EA82FF201E8585FE00B98820 /* AudioToolbox.framework in Frameworks */,
+				EA82FF211E8585FE00B98820 /* AVFoundation.framework in Frameworks */,
+				EA82FF221E8585FE00B98820 /* CoreGraphics.framework in Frameworks */,
+				EA82FF231E8585FE00B98820 /* CoreLocation.framework in Frameworks */,
+				EA82FF241E8585FE00B98820 /* CoreTelephony.framework in Frameworks */,
+				EA82FF251E8585FE00B98820 /* Foundation.framework in Frameworks */,
+				EA82FF261E8585FE00B98820 /* QuartzCore.framework in Frameworks */,
+				EA82FF271E8585FE00B98820 /* SystemConfiguration.framework in Frameworks */,
+				EA82FF281E8585FE00B98820 /* UIKit.framework in Frameworks */,
+				EA82FF151E85851100B98820 /* Contacts.framework in Frameworks */,
+				EA82FF161E85851100B98820 /* ContactsUI.framework in Frameworks */,
+				EA82FF121E8584FD00B98820 /* AddressBookUI.framework in Frameworks */,
+				EA82FF101E8584CF00B98820 /* AddressBook.framework in Frameworks */,
+				EA82FF0E1E8584AB00B98820 /* iflyMSC.framework in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -495,7 +537,21 @@
 		EA82FE9B1E84347200B98820 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EA82FEB51E8434BB00B98820 /* iflyMSC.framework */,
+				EA82FF291E85866700B98820 /* libz.tbd */,
+				EA82FF171E8585FE00B98820 /* AudioToolbox.framework */,
+				EA82FF181E8585FE00B98820 /* AVFoundation.framework */,
+				EA82FF191E8585FE00B98820 /* CoreGraphics.framework */,
+				EA82FF1A1E8585FE00B98820 /* CoreLocation.framework */,
+				EA82FF1B1E8585FE00B98820 /* CoreTelephony.framework */,
+				EA82FF1C1E8585FE00B98820 /* Foundation.framework */,
+				EA82FF1D1E8585FE00B98820 /* QuartzCore.framework */,
+				EA82FF1E1E8585FE00B98820 /* SystemConfiguration.framework */,
+				EA82FF1F1E8585FE00B98820 /* UIKit.framework */,
+				EA82FF131E85851100B98820 /* Contacts.framework */,
+				EA82FF141E85851100B98820 /* ContactsUI.framework */,
+				EA82FF111E8584FD00B98820 /* AddressBookUI.framework */,
+				EA82FF0F1E8584CF00B98820 /* AddressBook.framework */,
+				EA82FF0D1E8584AB00B98820 /* iflyMSC.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1017,6 +1073,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = HiCtrip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1035,6 +1095,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = HiCtrip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
