@@ -13,8 +13,7 @@ import{
 export default class InputBar extends Component{
     constructor(props){
         super(props);
-        // recognizer = NativeModules.IFlyRecognizer;
-        // recognizer.create();
+       
         this._recognizer = NativeModules.IFlyRecognizer;
         this._recognizer.create();
         this.onPressIn = this.onPressIn.bind(this);
@@ -23,25 +22,14 @@ export default class InputBar extends Component{
     get recognizer(){
         return this._recognizer;
     }
-    // set recognizer(){
-    //     if(!this._recognizer){
-            
-    //     }
-    // }
     onInput(){
 
     }
     onPressIn(){
-        // Alert.alert('onPress');
-        // var recognizer = NativeModules.IFlyRecognizer;
-        // Alert.alert(this._recognizer == undefined ? '1':'0');
-        // recognizer.addEvent('name','haha,address');
-        // recognizer.create();
         this._recognizer.begin();
     }
     onPressOut(){
         this._recognizer.stop();
-        // this._recognizer.cancel();
     }
     render(){
         return (
