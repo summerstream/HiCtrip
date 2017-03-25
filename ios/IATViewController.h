@@ -16,6 +16,7 @@ UIViewController<IFlySpeechRecognizerDelegate>
 
 +(void)start;
 -(void)begin;
+-(void)stop;
 -(void)initRecognizer;
-+(void)cancel;
+-(void)cancel;
 @end

@@ -45,9 +45,16 @@
   RCTLogInfo(@"begin listening...");
 }
 
+-(void)stop
+{
+  [_iFlySpeechRecognizer stopListening];
+  RCTLogInfo(@"listening stoped.");
+}
+
 -(void)cancel
 {
   [_iFlySpeechRecognizer cancel];
+  RCTLogInfo(@"listening canceled.");
 
 }
 
@@ -61,11 +68,11 @@
   }
 //  _result =[NSString stringWithFormat:@"%@%@", _textView.text,resultString];
   NSString * resultFromJson =  [ISRDataHelper stringFromJson:resultString];
-  RCTLogInfo(@"-------resultFromJson is:%@",resultFromJson);
   if(isLast){
     NSLog(@"听写结果(json)：%@测试",  self.result);
-    RCTLogInfo(@"------final string is: %@", resultFromJson);
-
+    RCTLogInfo(@"onResults---is last: %@", self.result);
+  }else{
+    RCTLogInfo(@"onResults---resultFromJson:%@",resultFromJson);
   }
 }
 
