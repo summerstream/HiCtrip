@@ -7,29 +7,62 @@ import{
     Button,
     Alert,
     NativeModules,
-    TouchableHighlight
+    TouchableHighlight,
+    NativeEventEmitter
 }from 'react-native'
+
+const {
+    IFlyRecognizerCallBack
+} = NativeModules;
+
+const IFlyRecognizerCallBackEmitter = new NativeEventEmitter(NativeModules.IFlyRecognizerCallBack);
+
 
 export default class InputBar extends Component{
     constructor(props){
         super(props);
        
         this._recognizer = NativeModules.IFlyRecognizer;
+        this.subscription = undefined;
+
         this._recognizer.create();
+        // IFlyRecognizerCallBackEmitter.create();
+
         this.onPressIn = this.onPressIn.bind(this);
         this.onPressOut = this.onPressOut.bind(this);
     }
-    get recognizer(){
-        return this._recognizer;
+    componentWillUnmount(){
+        if(this.subscription){
+            this.subscription.remove();
+            this.subscription = null;
+        }
     }
+    // get recognizer(){
+    //     return this._recognizer;
+    // }
     onInput(){
-
+        if(this.subscription){
+            this.subscription.remove();
+            this.subscription = null;
+        }
     }
     onPressIn(){
         this._recognizer.begin();
+        // IFlyRecognizerCallBackEmitter.begin();
+        if(this.subscription){
+            this.subscription.remove();
+            this.subscription = null;
+        }
+        this.subscription = IFlyRecognizerCallBackEmitter.addListener('resultReceived',this.renderMessage.bind(this));
+
     }
     onPressOut(){
         this._recognizer.stop();
+        // IFlyRecognizerCallBackEmitter.stop();
+    }
+    renderMessage(data){
+        Alert.alert(data.message);
+        // console.log(data.message);
     }
     render(){
         return (

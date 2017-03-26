@@ -54,6 +54,7 @@
 		EA82FF2A1E85866700B98820 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82FF291E85866700B98820 /* libz.tbd */; };
 		EA82FF2D1E858D1300B98820 /* IATViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA82FF2C1E858D1300B98820 /* IATViewController.m */; };
 		EA82FF301E85986800B98820 /* ISRDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA82FF2F1E85986800B98820 /* ISRDataHelper.m */; };
+		EA82FF331E86399600B98820 /* IFlyRecognizerCallBack.m in Sources */ = {isa = PBXBuildFile; fileRef = EA82FF321E86399600B98820 /* IFlyRecognizerCallBack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -294,6 +295,8 @@
 		EA82FF2C1E858D1300B98820 /* IATViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATViewController.m; sourceTree = "<group>"; };
 		EA82FF2E1E85983C00B98820 /* ISRDataHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISRDataHelper.h; sourceTree = "<group>"; };
 		EA82FF2F1E85986800B98820 /* ISRDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISRDataHelper.m; sourceTree = "<group>"; };
+		EA82FF311E86394500B98820 /* IFlyRecognizerCallBack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFlyRecognizerCallBack.h; sourceTree = "<group>"; };
+		EA82FF321E86399600B98820 /* IFlyRecognizerCallBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFlyRecognizerCallBack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,6 +459,8 @@
 				EA82FF2C1E858D1300B98820 /* IATViewController.m */,
 				EA82FF2E1E85983C00B98820 /* ISRDataHelper.h */,
 				EA82FF2F1E85986800B98820 /* ISRDataHelper.m */,
+				EA82FF311E86394500B98820 /* IFlyRecognizerCallBack.h */,
+				EA82FF321E86399600B98820 /* IFlyRecognizerCallBack.m */,
 			);
 			name = HiCtrip;
 			sourceTree = "<group>";
@@ -994,6 +999,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				EA82FEB91E843C3300B98820 /* IFlyRecognizer.m in Sources */,
+				EA82FF331E86399600B98820 /* IFlyRecognizerCallBack.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				EA82FF301E85986800B98820 /* ISRDataHelper.m in Sources */,
 				EA82FF2D1E858D1300B98820 /* IATViewController.m in Sources */,

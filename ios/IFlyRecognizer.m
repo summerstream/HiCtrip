@@ -17,15 +17,15 @@ RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location)
 {
-  RCTLogInfo(@"RCT_EXPORT_METHOD---Pretending to create an event %@ at %@", name, location);
-//  IATViewController *deck = [[IATViewController alloc] init];
+  RCTLogInfo(@"IFlyRecognizer---Pretending to create an event %@ at %@", name, location);
+  IATViewController *deck = [[IATViewController alloc] init];
 //  [deck begin];
 
 }
 
 RCT_EXPORT_METHOD(create)
 {
-  RCTLogInfo(@"RCT_EXPORT_METHOD---create" );
+  RCTLogInfo(@"IFlyRecognizer---create" );
   deck = [IATViewController alloc] ;
   [deck initRecognizer];
   
@@ -33,7 +33,7 @@ RCT_EXPORT_METHOD(create)
 
 RCT_EXPORT_METHOD(begin)
 {
-  RCTLogInfo(@"RCT_EXPORT_METHOD---begin" );
+  RCTLogInfo(@"IFlyRecognizer---begin" );
 //  IATViewController *deck = [IATViewController alloc] ;
   [deck begin];
   
@@ -44,7 +44,7 @@ RCT_EXPORT_METHOD(stop)
   //  IATViewController *deck = [IATViewController alloc] ;
   [deck stop];
 //  [deck cancel];
-  RCTLogInfo(@"RCT_EXPORT_METHOD---stop " );
+  RCTLogInfo(@"IFlyRecognizer---stop " );
 
 }
 

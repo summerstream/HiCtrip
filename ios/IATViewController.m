@@ -11,13 +11,20 @@
 #import "IATViewController.h"
 #import "ISRDataHelper.h"
 #import <React/RCTLog.h>
+#import "IFlyRecognizerCallBack.h"
 
 @implementation IATViewController
+{
+//  IFlyRecognizerCallBack* _iFlyRecognizerCallBack;
+}
 
 -(void)initRecognizer
 {
   
   _iFlySpeechRecognizer = [IFlySpeechRecognizer sharedInstance];
+//  if(_IFlyRecognizerCallBack == nil){
+//    _IFlyRecognizerCallBack = [IFlyRecognizerCallBack alloc];
+//  }
  
   [_iFlySpeechRecognizer setParameter: @"iat" forKey: [IFlySpeechConstant IFLY_DOMAIN]];
   [_iFlySpeechRecognizer setParameter:@"" forKey:[IFlySpeechConstant ASR_AUDIO_PATH]];
@@ -40,9 +47,15 @@
   if(_iFlySpeechRecognizer == nil){
     [self initRecognizer];
   }
+  
+//  if(_IFlyRecognizerCallBack == nil){
+//    _IFlyRecognizerCallBack = [IFlyRecognizerCallBack alloc];
+//  }
+  
   [_iFlySpeechRecognizer cancel];
   BOOL ret = [_iFlySpeechRecognizer startListening];
   RCTLogInfo(@"begin listening...");
+  
 }
 
 -(void)stop
@@ -69,10 +82,12 @@
 //  _result =[NSString stringWithFormat:@"%@%@", _textView.text,resultString];
   NSString * resultFromJson =  [ISRDataHelper stringFromJson:resultString];
   if(isLast){
-    NSLog(@"听写结果(json)：%@测试",  self.result);
-    RCTLogInfo(@"onResults---is last: %@", self.result);
+//    NSLog(@"听写结果(json)：%@测试",  self.result);
+//    RCTLogInfo(@"onResults---is last: %@", self.result);
   }else{
+    [[IFlyRecognizerCallBack sharedInstanceTool ]resultReceived:resultFromJson];
     RCTLogInfo(@"onResults---resultFromJson:%@",resultFromJson);
+    
   }
 }
 

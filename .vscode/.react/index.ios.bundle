@@ -48203,6 +48203,11 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(79            ); // 79 = react-native
 
+var IFlyRecognizerCallBack = _reactNative.NativeModules.IFlyRecognizerCallBack;
+
+
+var IFlyRecognizerCallBackEmitter = new _reactNative.NativeEventEmitter(_reactNative.NativeModules.IFlyRecognizerCallBack);
+
 var InputBar = function (_Component) {
     babelHelpers.inherits(InputBar, _Component);
 
@@ -48212,24 +48217,52 @@ var InputBar = function (_Component) {
         var _this = babelHelpers.possibleConstructorReturn(this, (InputBar.__proto__ || Object.getPrototypeOf(InputBar)).call(this, props));
 
         _this._recognizer = _reactNative.NativeModules.IFlyRecognizer;
+        _this.subscription = undefined;
+
         _this._recognizer.create();
+
+
         _this.onPressIn = _this.onPressIn.bind(_this);
         _this.onPressOut = _this.onPressOut.bind(_this);
         return _this;
     }
 
     babelHelpers.createClass(InputBar, [{
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            if (this.subscription) {
+                this.subscription.remove();
+                this.subscription = null;
+            }
+        }
+    }, {
         key: 'onInput',
-        value: function onInput() {}
+        value: function onInput() {
+            if (this.subscription) {
+                this.subscription.remove();
+                this.subscription = null;
+            }
+        }
     }, {
         key: 'onPressIn',
         value: function onPressIn() {
             this._recognizer.begin();
+
+            if (this.subscription) {
+                this.subscription.remove();
+                this.subscription = null;
+            }
+            this.subscription = IFlyRecognizerCallBackEmitter.addListener('resultReceived', this.renderMessage.bind(this));
         }
     }, {
         key: 'onPressOut',
         value: function onPressOut() {
             this._recognizer.stop();
+        }
+    }, {
+        key: 'renderMessage',
+        value: function renderMessage(data) {
+            console.log(data.message);
         }
     }, {
         key: 'render',
@@ -48256,11 +48289,6 @@ var InputBar = function (_Component) {
                     })
                 )
             );
-        }
-    }, {
-        key: 'recognizer',
-        get: function get() {
-            return this._recognizer;
         }
     }]);
     return InputBar;
